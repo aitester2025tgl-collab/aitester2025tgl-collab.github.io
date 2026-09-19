@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tiago Lab AI Lab — experiments with AI-assisted product development, local AI and creative workflows." />
+  <title>AI Lab — Tiago Lab</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero{background:linear-gradient(135deg,#0b4f8a 0%,#1268b3 100%);color:#f7fbff;padding:78px 0 76px;position:relative;overflow:hidden}.page-hero:after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-220px;top:-220px;background:#56c5ff;opacity:.12;filter:blur(75px)}.page-hero-inner{position:relative;z-index:1;max-width:860px}.page-hero h1{font-size:clamp(4rem,8vw,7rem);line-height:.88;margin:0 0 24px;max-width:900px}.page-hero h1 span{color:#18a8ff}.page-hero p:last-child{font-size:1.12rem;line-height:1.65;color:#e0edf7;max-width:680px;margin:0}.lab-section{padding:92px 0;background:#f4f8fc}.lab-section.white{background:#fff}.lab-heading{max-width:760px;margin-bottom:46px}.lab-heading .eyebrow{color:#4f7597}.lab-heading h2{font-size:clamp(2.6rem,5vw,4.7rem);line-height:.94;letter-spacing:-.06em;margin:0 0 18px}.lab-heading h2 span{color:#168fe0}.lab-heading p{color:#607a93;max-width:650px}.experiment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.experiment-card{background:#fff;border:1px solid #d8e5ef;border-radius:16px;padding:28px;min-height:280px;display:flex;flex-direction:column;box-shadow:0 8px 30px rgba(18,48,77,.05)}.experiment-card .num{font-size:.65rem;font-weight:800;letter-spacing:.14em;color:#168fe0;margin-bottom:42px}.experiment-card h3{font-size:1.35rem;letter-spacing:-.03em;margin:0 0 10px}.experiment-card p{font-size:.88rem;color:#607a93;margin:0}.experiment-card .tag{margin-top:auto;padding-top:25px;font-size:.64rem;text-transform:uppercase;letter-spacing:.12em;color:#7892a8}.workflow{display:grid;grid-template-columns:1.05fr .95fr;gap:90px;align-items:start}.workflow h2{font-size:clamp(2.7rem,5vw,5rem);line-height:.94;letter-spacing:-.06em;margin:0}.workflow h2 span{color:#168fe0}.workflow-copy p{color:#607a93;max-width:570px}.steps{border-top:1px solid #d8e5ef}.step{display:grid;grid-template-columns:45px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid #d8e5ef}.step>span{font-size:.65rem;color:#168fe0;font-weight:800}.step h3{margin:0 0 5px;font-size:1rem}.step p{margin:0;color:#607a93;font-size:.82rem}.tools-section{background:#0d5c98;color:#f7fbff;padding:88px 0}.tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.tool{border-top:1px solid rgba(255,255,255,.25);padding:20px 0}.tool strong{display:block;font-size:1rem;margin-bottom:6px}.tool span{color:#c7ddeb;font-size:.75rem}.note{margin-top:50px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);color:#c7ddeb;font-size:.82rem;max-width:780px}.closing{padding:96px 0;background:#fff}.closing-inner{display:flex;justify-content:space-between;align-items:end;gap:50px}.closing h2{font-size:clamp(2.7rem,5vw,5rem);line-height:.94;letter-spacing:-.06em;margin:0}.closing h2 span{color:#168fe0}.closing p{max-width:480px;color:#607a93;margin:0}.back-link{display:inline-flex;margin-top:32px;color:#168fe0;font-size:.82rem;font-weight:800}.site-footer{background:#f4f8fc}
+    @media(max-width:900px){.experiment-grid,.tools-grid{grid-template-columns:repeat(2,1fr)}.workflow,.closing-inner{grid-template-columns:1fr;display:grid;gap:45px}}
+    @media(max-width:600px){.page-hero{padding:60px 0 62px}.page-hero h1{font-size:clamp(3.2rem,15vw,5rem)}.lab-section,.closing{padding:72px 0}.experiment-grid,.tools-grid{grid-template-columns:1fr}.experiment-card{min-height:235px}.workflow{gap:38px}.closing-inner{gap:30px}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">TIAGO <span>LAB</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="index.html">AI Lab</a>
+        <a href="../index.html#about">About</a>
+        <a href="../cv.html">CV</a>
+        <a href="../index.html#collaborate">Collaborate</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="../index.html#projects">Projects</a><a href="index.html">AI Lab</a><a href="../index.html#about">About</a><a href="../index.html#collaborate">Collaborate</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <p class="eyebrow"><span class="status-dot"></span> 02 / AI LAB</p>
+        <h1>AI is part of the<br><span>experiment.</span></h1>
+        <p>I'm interested in understanding where AI genuinely changes the way I can explore ideas, build products and solve problems — and where it doesn't.</p>
+      </div>
+    </section>
+
+    <section class="lab-section">
+      <div class="container">
+        <div class="lab-heading">
+          <p class="eyebrow">What I'm exploring</p>
+          <h2>Not just using AI.<br><span>Working with it.</span></h2>
+          <p>My experiments range from using AI as a development partner to testing local models and exploring new ways of turning product ideas into working prototypes.</p>
+        </div>
+        <div class="experiment-grid">
+          <article class="experiment-card"><div class="num">01 / DEVELOPMENT</div><h3>AI as a developer</h3><p>Using AI to translate product ideas, requirements and decisions into working software — while I stay focused on product direction and iteration.</p><div class="tag">FootLab · Prototyping</div></article>
+          <article class="experiment-card"><div class="num">02 / LOCAL AI</div><h3>Running models locally</h3><p>Experimenting with Ollama and local LLMs to understand what can be done without relying entirely on cloud-based AI services.</p><div class="tag">Ollama · Mistral · LLMs</div></article>
+          <article class="experiment-card"><div class="num">03 / CREATIVE</div><h3>AI-assisted creation</h3><p>Exploring how AI can help with structured creative work, including character creation, interactive storytelling and visual-novel development.</p><div class="tag">Character Creator · Visual Novel</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="lab-section white">
+      <div class="container workflow">
+        <div class="workflow-copy">
+          <p class="eyebrow">The workflow</p>
+          <h2>Idea → <span>conversation</span> → prototype.</h2>
+          <p>One of the things I find most interesting is the change in distance between having an idea and being able to test it. Instead of treating AI as a black box, I use the interaction itself as part of the product process.</p>
+          <p>The important part is not simply generating code. It is defining the problem, communicating intent, reviewing the result, making decisions and iterating until the product starts to make sense.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><span>01</span><div><h3>Define</h3><p>Describe the problem, goal and constraints.</p></div></div>
+          <div class="step"><span>02</span><div><h3>Explore</h3><p>Use AI to challenge ideas, structure possibilities and investigate approaches.</p></div></div>
+          <div class="step"><span>03</span><div><h3>Build</h3><p>Turn the selected direction into a working prototype.</p></div></div>
+          <div class="step"><span>04</span><div><h3>Review</h3><p>Test the result, identify what is wrong and decide what changes.</p></div></div>
+          <div class="step"><span>05</span><div><h3>Iterate</h3><p>Repeat until the experiment produces something useful.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-section">
+      <div class="container">
+        <div class="lab-heading"><p class="eyebrow">Tools & approaches</p><h2>Different tools.<br><span>Different questions.</span></h2><p style="color:#c7ddeb">The goal is not to collect AI tools. It is to understand which approach makes sense for a particular problem.</p></div>
+        <div class="tools-grid">
+          <div class="tool"><strong>ChatGPT</strong><span>Ideation · reasoning · product work · development support</span></div>
+          <div class="tool"><strong>Ollama</strong><span>Local AI · model experimentation</span></div>
+          <div class="tool"><strong>Mistral</strong><span>Local LLM experimentation and structured reasoning</span></div>
+          <div class="tool"><strong>Python & LLM workflows</strong><span>Prototypes · APIs · structured outputs · automation</span></div>
+        </div>
+        <p class="note">Some experiments work better with a local model, others benefit from a stronger cloud model, and some simply don't need AI. The lab is about finding that boundary through actual experimentation.</p>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="container closing-inner">
+        <div><p class="eyebrow">The point of the lab</p><h2>Learn what AI<br><span>actually changes.</span></h2></div>
+        <div><p>I'm not interested in using AI because it is fashionable. I'm interested in understanding what becomes possible when AI becomes another tool in the product development process.</p><a class="back-link" href="../index.html#projects">Explore the projects →</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><strong>TIAGO LAB</strong><span>Ideas · Products · Experiments</span><span>© <span id="year"></span></span></div></footer>
+  <script src="../js/app.js"></script>
+</body>
+</html>

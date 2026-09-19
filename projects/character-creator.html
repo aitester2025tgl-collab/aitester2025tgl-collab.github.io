@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personagem Processor PRO — a local tool for creating and preparing consistent Visual Novel character sprites through a simplified ComfyUI workflow." />
+  <title>Character Creator — Tiago Lab</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/character.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">TIAGO <span>LAB</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#ai-lab">AI Lab</a>
+        <a href="../index.html#about">About</a>
+        <a href="../cv.html">CV</a>
+        <a href="../index.html#collaborate">Collaborate</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#ai-lab">AI Lab</a>
+      <a href="../index.html#about">About</a>
+      <a href="../cv.html">CV</a>
+      <a href="../index.html#collaborate">Collaborate</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cc-hero">
+      <div class="cc-orb cc-orb-one"></div><div class="cc-orb cc-orb-two"></div>
+      <div class="container cc-hero-inner">
+        <div>
+          <p class="eyebrow"><span class="cc-dot"></span> Project 03 · AI experiment · Visual Novel tooling</p>
+          <h1>Character<br><span>Creator.</span></h1>
+          <p class="cc-lead">Turning a complex AI image workflow into a tool designed around a very specific creative problem: creating consistent character sprites for Visual Novels.</p>
+          <div class="cc-meta"><span>Personagem Processor PRO</span><span>Local tool</span><span>Experimental</span></div>
+        </div>
+        <div class="cc-diagram" aria-label="Conceptual diagram of the character creation workflow">
+          <div class="cc-core"><strong>CHARACTER</strong><span>PROCESSOR</span></div>
+          <div class="cc-ring cc-ring-a"></div><div class="cc-ring cc-ring-b"></div>
+          <span class="cc-node node-a">CREATE</span><span class="cc-node node-b">EDIT</span><span class="cc-node node-c">CONSISTENCY</span><span class="cc-node node-d">SPRITES</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cc-intro">
+      <div class="container cc-two-col">
+        <div><p class="eyebrow dark">01 / The idea</p><h2>Make complex AI workflows feel <span>simple.</span></h2></div>
+        <div class="cc-copy">
+          <p><strong>Personagem Processor PRO</strong> is a local GUI designed to automate and accelerate the creation of consistent character sprites for Visual Novels.</p>
+          <p>The application acts as a layer between the user and a local ComfyUI server, hiding the complexity of nodes and workflows behind menus, controls and dedicated creative tasks.</p>
+          <p>The interesting product challenge was not simply generating an image. It was making a powerful but complex workflow easier to operate repeatedly when building a character.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cc-capabilities">
+      <div class="container">
+        <div class="section-heading cc-heading"><div><p class="eyebrow">02 / What it does</p><h2>One character.<br><span>Many possibilities.</span></h2></div><p>The tool brings several character-generation and image-preparation workflows into one local interface.</p></div>
+        <div class="cc-cap-grid">
+          <article><span>01</span><h3>Create</h3><p>Generate new characters using combinations of camera angles, artistic styles, clothing and other character attributes.</p></article>
+          <article><span>02</span><h3>Keep consistency</h3><p>Use FaceID-based workflows to preserve a character's facial identity from a reference image.</p></article>
+          <article><span>03</span><h3>Edit</h3><p>Modify clothing, colours or style while keeping the original anatomy through ControlNet-based workflows.</p></article>
+          <article><span>04</span><h3>Expand & express</h3><p>Turn portraits into fuller character images or change expressions while preserving the rest of the character.</p></article>
+          <article><span>05</span><h3>Prepare sprites</h3><p>Remove backgrounds and prepare images for Visual Novel sprite dimensions, including batch processing.</p></article>
+          <article><span>06</span><h3>Iterate</h3><p>Reuse workflows, generate alternatives with new seeds, keep a local history and compare results before and after edits.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cc-workflow">
+      <div class="container">
+        <div class="cc-workflow-head"><p class="eyebrow">03 / The workflow</p><h2>From creative intent to <span>usable output.</span></h2></div>
+        <div class="cc-flow">
+          <div><strong>01</strong><h3>Choose</h3><p>Select the creative task and the parameters that matter.</p></div>
+          <div><strong>02</strong><h3>Generate</h3><p>The application builds the workflow and communicates with ComfyUI.</p></div>
+          <div><strong>03</strong><h3>Review</h3><p>Preview the result and decide what needs to change.</p></div>
+          <div><strong>04</strong><h3>Refine</h3><p>Iterate, edit, regenerate or prepare the final sprite.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cc-product">
+      <div class="container cc-two-col">
+        <div><p class="eyebrow dark">04 / The product layer</p><h2>Not just image generation. <span>A usable tool.</span></h2></div>
+        <div class="cc-product-card">
+          <p>The underlying technology can be powerful and still be difficult to use. This project explores what happens when the workflow is treated as a product problem rather than just a technical one.</p>
+          <div class="cc-split"><div><small>COMPLEXITY</small><strong>ComfyUI · Nodes · Workflows · Models</strong></div><div><small>PRODUCT LAYER</small><strong>Menus · Parameters · Preview · History</strong></div></div>
+          <p>The result is a dedicated interface that hides much of the technical complexity while keeping the creative controls accessible.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cc-tech">
+      <div class="container cc-two-col">
+        <div><p class="eyebrow">05 / Technical foundation</p><h2>A local AI stack <span>behind the interface.</span></h2><p class="cc-tech-intro">The README describes a modular Python application that communicates with a local ComfyUI server and coordinates image-processing and generation workflows.</p></div>
+        <div class="cc-tech-list">
+          <div><strong>Python + Tkinter</strong><p>Native desktop interface and application logic.</p></div>
+          <div><strong>ComfyUI</strong><p>Local diffusion engine for SDXL / Pony workflows.</p></div>
+          <div><strong>ControlNet</strong><p>Lineart and OpenPose workflows for controlled edits and expression changes.</p></div>
+          <div><strong>IP-Adapter / FaceID</strong><p>Reference-based facial consistency with InsightFace.</p></div>
+          <div><strong>Rembg</strong><p>Automatic background removal and sprite preparation.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cc-learned">
+      <div class="container cc-two-col">
+        <div><p class="eyebrow dark">06 / What I explored</p><h2>The real experiment was <span>the workflow.</span></h2></div>
+        <div class="cc-copy">
+          <p>This project was an exploration of how a complex AI stack can be turned into a focused tool for a specific creative workflow.</p>
+          <p>Instead of exposing the underlying technical setup directly, the product is organised around the decisions a user actually wants to make: what to create, what to change, what to preserve and how to prepare the result.</p>
+          <p>For me, that is the interesting part of the project: <strong>using AI capabilities as building blocks for a product rather than treating the model itself as the product.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cc-status">
+      <div class="container cc-status-inner"><div><p class="eyebrow">07 / Current status</p><h2>A personal tool built for <span>experimentation.</span></h2></div><div><p>Personagem Processor PRO is a personal and experimental project, built for local use and exploration of AI-assisted creative workflows.</p><a class="button button-light" href="../index.html#projects">Back to projects <span>↗</span></a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><strong>TIAGO LAB</strong><span>Ideas · Products · Experiments</span><span>© <span id="year"></span></span></div></footer>
+  <script src="../js/app.js"></script>
+</body>
+</html>
