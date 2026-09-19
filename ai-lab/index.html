@@ -11,12 +11,12 @@
     @media(max-width:900px){.experiment-grid,.tools-grid{grid-template-columns:repeat(2,1fr)}.workflow,.closing-inner{grid-template-columns:1fr;display:grid;gap:45px}}
     @media(max-width:600px){.page-hero{padding:60px 0 62px}.page-hero h1{font-size:clamp(3.2rem,15vw,5rem)}.lab-section,.closing{padding:72px 0}.experiment-grid,.tools-grid{grid-template-columns:1fr}.experiment-card{min-height:235px}.workflow{gap:38px}.closing-inner{gap:30px}}
   </style>
-  <script data-goatcounter="https://tiagolab.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="../index.html">TIAGO <span>LAB</span></a>
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/tiago-lab-logo.png" alt="" /><span>TIAGO <b>LAB</b></span></a>
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="../index.html#projects">Projects</a>
         <a href="index.html">AI Lab</a>
@@ -26,7 +26,7 @@
       </nav>
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
     </div>
-    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
       <a href="../index.html#projects">Projects</a><a href="index.html">AI Lab</a><a href="../index.html#about">About</a><a href="../index.html#collaborate">Collaborate</a>
     </nav>
   </header>
@@ -50,7 +50,7 @@
         <div class="experiment-grid">
           <article class="experiment-card"><div class="num">01 / DEVELOPMENT</div><h3>AI as a developer</h3><p>Using AI to translate product ideas, requirements and decisions into working software — while I stay focused on product direction and iteration.</p><div class="tag">FootLab · Prototyping</div></article>
           <article class="experiment-card"><div class="num">02 / LOCAL AI</div><h3>Running models locally</h3><p>Experimenting with Ollama and local LLMs to understand what can be done without relying entirely on cloud-based AI services.</p><div class="tag">Ollama · Mistral · LLMs</div></article>
-          <article class="experiment-card"><div class="num">03 / CREATIVE</div><h3>AI-assisted creation</h3><p>Exploring how AI can help with structured creative work, including character creation and structured creative workflows.</p><div class="tag">Character Creator</div></article>
+          <article class="experiment-card"><div class="num">03 / CREATIVE</div><h3>AI-assisted creation</h3><p>Exploring how AI can help with structured creative work, including character creation, interactive storytelling and visual-novel development.</p><div class="tag">Character Creator · Visual Novel</div></article>
         </div>
       </div>
     </section>
@@ -93,7 +93,7 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="container footer-inner"><strong>TIAGO LAB</strong><span>Ideas · Products · Experiments</span><span class="footer-visits" aria-label="Site visits">👁 <span id="visitCount" class="visit-count-value">—</span> visits</span><span>© <span id="year"></span></span></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><strong>TIAGO LAB</strong><span>Ideas · Products · Experiments</span><span>© <span id="year"></span></span></div></footer>
   <script src="../js/app.js"></script>
 </body>
 </html>
