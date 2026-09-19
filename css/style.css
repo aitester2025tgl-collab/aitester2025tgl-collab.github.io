@@ -42,3 +42,9 @@
   transition:transform .2s ease, box-shadow .2s ease;
 }
 .support .btn-primary:hover { transform:translateY(-3px); box-shadow:0 14px 32px rgba(18,104,179,.22); }
+
+
+/* Site visitor counter */
+.footer-visits { color: #607a93; white-space: nowrap; }
+#visitCount { font-variant-numeric: tabular-nums; }
+@media(max-width:600px){ .footer-visits { order: 3; } }
