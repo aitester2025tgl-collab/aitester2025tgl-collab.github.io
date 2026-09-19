@@ -4,45 +4,31 @@ Personal portfolio and lab for projects, experiments and AI exploration.
 
 **Product Manager by profession. Builder by curiosity. AI explorer.**
 
-Tiago Lab is where I share things I build in my spare time — from product experiments and games to AI-assisted tools and workflows.
-
-## Current projects
-
-- **FootLab** — football management game and product experiment.
-- **Character Creator** — AI-assisted character creation workflow built around local ComfyUI.
-- **Finance** — personal finance and investment tracking concept; the project itself is not part of this public repository.
-- **Visual Novel** — interactive storytelling experiment; the public case study is still being prepared.
+Live site: https://aitester2025tgl-collab.github.io/
 
 ## Site structure
 
-```text
-.
-├── index.html
-├── cv.html
-├── collaboration.html
-├── ai-lab/
-│   └── index.html
-├── projects/
-│   ├── footlab.html
-│   └── character-creator.html
-├── assets/
-│   └── footlab/
-├── css/
-└── js/
-```
+- `index.html` — homepage
+- `cv.html` — web CV, with PDF download
+- `collaboration.html` — collaboration page
+- `ai-lab/` — AI Lab
+- `projects/footlab.html` — FootLab case study
+- `projects/character-creator.html` — Character Creator case study
+- `assets/Tiago-Louro-CV.pdf` — downloadable CV
+- `assets/footlab/` — FootLab screenshots
+- `css/` — site styles
+- `js/app.js` — navigation, year and visitor counter
 
-## Local development
+## Hosting
 
-This is a static, dependency-free website. No build step is required.
+The site is a static HTML/CSS/JS website hosted with GitHub Pages.
 
-Open `index.html` in a browser, or serve the folder with any local static HTTP server.
+## Analytics
 
-## GitHub Pages
+Visitor analytics are provided by GoatCounter. The public footer displays the site's total visit count.
 
-This repository is intended to be published as the Tiago Lab GitHub Pages site.
+No personal financial data or private project data is included in this public repository.
 
-The site uses only static HTML, CSS, JavaScript and local assets.
 
-## Privacy
-
-No personal financial data, private documents, credentials, API keys or employer-confidential material should be committed to this repository.
+## Analytics
+The public site uses GoatCounter for a privacy-focused visitor count.
