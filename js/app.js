@@ -15,35 +15,23 @@ mobileNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', 
   if (menuToggle) menuToggle.textContent = '☰';
 }));
 
-
 // GoatCounter: show the site's total visit count in the footer.
-// The official visit_count() helper avoids cross-origin fetch issues and
-// supports the special TOTAL path for the whole site.
+// GoatCounter exposes the public TOTAL counter as JSON when visitor-count
+// sharing is enabled in the dashboard. This keeps the footer as plain text.
 const visitCount = document.getElementById('visitCount');
 if (visitCount) {
-  const renderVisitCount = () => {
-    if (!window.goatcounter || typeof window.goatcounter.visit_count !== 'function') return false;
-
-    visitCount.innerHTML = '';
-    window.goatcounter.visit_count({
-      append: '#visitCount',
-      path: 'TOTAL',
-      type: 'html',
-      no_branding: true,
-      style: `
-        div { display:inline !important; margin:0 !important; padding:0 !important; width:auto !important; height:auto !important; background:transparent !important; border:0 !important; color:inherit !important; font:inherit !important; }
-        #gcvc-for, #gcvc-by { display:none !important; }
-        #gcvc-views { color:inherit !important; font:inherit !important; font-weight:700 !important; }
-      `
+  fetch('https://tiagolab.goatcounter.com/counter/TOTAL.json', { cache: 'no-store' })
+    .then(response => {
+      if (!response.ok) throw new Error(`GoatCounter HTTP ${response.status}`);
+      return response.json();
+    })
+    .then(data => {
+      if (data && data.count !== undefined) {
+        visitCount.textContent = data.count;
+      }
+    })
+    .catch(() => {
+      // Keep the placeholder unobtrusive if analytics is blocked.
+      visitCount.textContent = '—';
     });
-    return true;
-  };
-
-  if (!renderVisitCount()) {
-    let attempts = 0;
-    const timer = setInterval(() => {
-      attempts += 1;
-      if (renderVisitCount() || attempts >= 50) clearInterval(timer);
-    }, 100);
-  }
 }
