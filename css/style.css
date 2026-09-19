@@ -50,9 +50,5 @@
 @media(max-width:600px){ .footer-visits { order:3; } }
 
 
-/* GoatCounter public total: keep only the number visible. */
-.footer-visits #visitCount { display:inline-flex; align-items:center; min-width:1.2em; }
-.footer-visits #visitCount > div { display:inline-flex; align-items:center; margin:0; padding:0; border:0; background:transparent; color:inherit; font:inherit; }
-.footer-visits #visitCount #gcvc-for,
-.footer-visits #visitCount #gcvc-by { display:none !important; }
-.footer-visits #visitCount #gcvc-views { font-weight:700; font-variant-numeric:tabular-nums; color:inherit; }
+/* GoatCounter public total is rendered as plain text by app.js. */
+.footer-visits #visitCount { font-variant-numeric: tabular-nums; }

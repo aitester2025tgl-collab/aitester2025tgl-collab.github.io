@@ -2,7 +2,8 @@ const menuToggle = document.getElementById('menuToggle');
 const mobileNav = document.getElementById('mobileNav');
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
-if (menuToggle) {
+
+if (menuToggle && mobileNav) {
   menuToggle.addEventListener('click', () => {
     const open = mobileNav.classList.toggle('open');
     mobileNav.hidden = !open;
@@ -10,6 +11,7 @@ if (menuToggle) {
     menuToggle.textContent = open ? '×' : '☰';
   });
 }
+
 mobileNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   mobileNav.classList.remove('open');
   mobileNav.hidden = true;
@@ -18,25 +20,25 @@ mobileNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', 
 }));
 
 // GoatCounter: show the site's total visit count in the footer.
-// Use GoatCounter's official visitor_count() integration for the public TOTAL.
+// We fetch GoatCounter's public TOTAL JSON endpoint and place only the
+// formatted number in our own footer. This avoids injecting GoatCounter's
+// visitor-counter HTML into the footer.
 const visitCount = document.getElementById('visitCount');
 if (visitCount) {
-  const showVisitCount = () => {
-    if (!window.goatcounter || !window.goatcounter.visit_count) return false;
-    visitCount.textContent = '';
-    window.goatcounter.visit_count({
-      append: '#visitCount',
-      path: 'TOTAL',
-      type: 'html',
-      no_branding: true,
+  fetch('https://tiagolab.goatcounter.com/counter/TOTAL.json', {
+    method: 'GET',
+    cache: 'no-store'
+  })
+    .then(response => {
+      if (!response.ok) throw new Error(`GoatCounter returned ${response.status}`);
+      return response.json();
+    })
+    .then(data => {
+      if (data && typeof data.count !== 'undefined') {
+        visitCount.textContent = data.count;
+      }
+    })
+    .catch(() => {
+      // Keep the placeholder if the public counter is temporarily unavailable.
     });
-    return true;
-  };
-
-  if (!showVisitCount()) {
-    const timer = setInterval(() => {
-      if (showVisitCount()) clearInterval(timer);
-    }, 100);
-    setTimeout(() => clearInterval(timer), 10000);
-  }
 }
