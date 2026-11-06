@@ -16,35 +16,17 @@ mobileNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', 
 }));
 
 
-// GoatCounter: show the site's total visit count in the footer.
-// The official visit_count() helper avoids cross-origin fetch issues and
-// supports the special TOTAL path for the whole site.
+// Fetch the public total directly; tracking is independent of the display.
 const visitCount = document.getElementById('visitCount');
 if (visitCount) {
-  const renderVisitCount = () => {
-    if (!window.goatcounter || typeof window.goatcounter.visit_count !== 'function') return false;
-
-    visitCount.innerHTML = '';
-    window.goatcounter.visit_count({
-      append: '#visitCount',
-      path: 'TOTAL',
-      type: 'html',
-      attr: { width: '90', height: '24', title: 'Total site visits', loading: 'lazy' },
-      no_branding: true,
-      style: `
-        div { display:inline !important; margin:0 !important; padding:0 !important; width:auto !important; height:auto !important; background:transparent !important; border:0 !important; color:inherit !important; font:inherit !important; }
-        #gcvc-for, #gcvc-by { display:none !important; }
-        #gcvc-views { color:inherit !important; font:inherit !important; font-weight:700 !important; }
-      `
-    });
-    return true;
-  };
-
-  if (!renderVisitCount()) {
-    let attempts = 0;
-    const timer = setInterval(() => {
-      attempts += 1;
-      if (renderVisitCount() || attempts >= 50) { clearInterval(timer); if (attempts >= 50 && !window.goatcounter?.visit_count) visitCount.textContent = 'Unavailable'; }
-    }, 100);
-  }
+  fetch('https://tiagolab.goatcounter.com/counter/TOTAL.json')
+    .then(response => {
+      if (!response.ok) throw new Error('Counter unavailable');
+      return response.json();
+    })
+    .then(data => {
+      if (typeof data.count !== 'string' && typeof data.count !== 'number') throw new Error('Invalid counter');
+      visitCount.textContent = String(data.count);
+    })
+    .catch(() => { visitCount.textContent = 'Unavailable'; });
 }
