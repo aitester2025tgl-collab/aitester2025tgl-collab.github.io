@@ -16,17 +16,15 @@ mobileNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', 
 }));
 
 
-// Fetch the public total directly; tracking is independent of the display.
+// Embed the official public visitor counter.
 const visitCount = document.getElementById('visitCount');
 if (visitCount) {
-  fetch('https://tiagolab.goatcounter.com/counter/TOTAL.json')
-    .then(response => {
-      if (!response.ok) throw new Error('Counter unavailable');
-      return response.json();
-    })
-    .then(data => {
-      if (typeof data.count !== 'string' && typeof data.count !== 'number') throw new Error('Invalid counter');
-      visitCount.textContent = String(data.count);
-    })
-    .catch(() => { visitCount.textContent = 'Unavailable'; });
+  const counter = document.createElement('iframe');
+  counter.src = 'https://tiagolab.goatcounter.com/counter/TOTAL.html';
+  counter.title = 'Total site visits';
+  counter.width = '200';
+  counter.height = '80';
+  counter.style.cssText = 'border:0;display:block';
+  counter.scrolling = 'no';
+  visitCount.replaceChildren(counter);
 }
