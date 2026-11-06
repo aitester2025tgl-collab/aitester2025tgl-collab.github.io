@@ -1,0 +1,7 @@
+@media(min-width:901px){.site-header .mobile-nav,.site-header .mobile-nav.open{display:none!important}}
+@media(max-width:900px){.site-header .mobile-nav:not(.open){display:none!important}.site-header .mobile-nav.open{display:flex!important}}
+.project-row:not(a):hover{padding-left:0;padding-right:0;background:none}.project-row:not(a) .project-arrow{font-size:.7rem;white-space:nowrap;color:#607a93}
+
+.art-book{background:#0b1423 url(../assets/book-cover.jpg) center 54%/cover no-repeat}.art-book:before,.art-book:after{display:none}.art-book span,.art-book small,.art-steel span,.art-steel small{background:rgba(3,12,24,.78);border-radius:4px;padding:3px 6px}.art-steel{background:#0b1423 url(../assets/steel-league-athletes.png) center 18%/cover no-repeat}.art-steel:before,.art-steel:after{display:none}
+
+.art-folha{background:#254e3c url(../assets/folha-icon.svg) 90% 50%/100px 100px no-repeat}.art-folha:before,.art-folha:after{display:none}.art-footlab{background:#0d5c98 url(../assets/footlab/match-board.png) center/cover no-repeat}.art-footlab span,.art-footlab small{background:rgba(3,12,24,.76);border-radius:4px;padding:3px 6px}
