@@ -29,6 +29,8 @@
 .project-list .project-info p{font-size:.8rem;margin-top:5px;line-height:1.45}
 .project-list .project-arrow{grid-column:auto;grid-row:auto;font-size:1rem}
 .project-list .project-row:not(a) .project-arrow{font-size:.62rem}
+/* Image previews need no label: the card title sits beside them. Placeholders (no image) keep theirs. */
+.project-list .project-art:not(.art-finance):not(.art-vn) span,.project-list .project-art:not(.art-finance):not(.art-vn) small{display:none}
 @media(max-width:1000px){.project-list .project-row{grid-template-columns:120px minmax(0,1fr) 16px;gap:12px}.project-list .project-art{height:84px}}
 @media(max-width:700px){.project-list{grid-template-columns:1fr}}
 @media(max-width:480px){.project-list .project-row{grid-template-columns:110px minmax(0,1fr);gap:12px;padding:10px}.project-list .project-row:hover{padding:10px}.project-list .project-art{height:78px}.project-list .project-arrow{display:none}.project-list .project-info p{font-size:.76rem}}
