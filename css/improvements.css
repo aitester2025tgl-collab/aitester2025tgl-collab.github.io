@@ -13,19 +13,14 @@
 
 /* Work teaser: a slim band under the hero linking to work.html */
 .work-teaser{background:#0a3f6e;border-bottom:1px solid rgba(255,255,255,.12)}
-.work-teaser-inner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;padding:22px 0;color:#fff}
-.work-teaser-eyebrow{margin:0 0 6px;color:#9fd2f5;font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
-.work-teaser-text{margin:0;color:#d9e8f4;font-size:.98rem;line-height:1.5;max-width:620px}
-.work-teaser-text strong{color:#fff}
-.work-teaser-link{display:inline-block;margin-top:8px;color:#fff;font-weight:800;font-size:.86rem;border-bottom:2px solid #18a8ff;padding-bottom:2px}
+.work-teaser-inner{display:flex;align-items:center;justify-content:space-between;gap:12px 32px;flex-wrap:wrap;padding:16px 0;color:#fff;text-decoration:none}
+.work-teaser-text{margin:0;color:#d9e8f4;font-size:.95rem;line-height:1.5}
+.work-teaser-text strong{color:#fff;font-weight:700}
+.work-teaser-eyebrow{display:inline-block;margin-right:10px;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.12);color:#9fd2f5;font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;vertical-align:2px}
+.work-teaser-link{white-space:nowrap;color:#fff;font-weight:800;font-size:.86rem;border-bottom:2px solid #18a8ff;padding-bottom:2px}
 .work-teaser-link span{display:inline-block;transition:transform .2s ease}
 .work-teaser-inner:hover .work-teaser-link span,.work-teaser-inner:focus-visible .work-teaser-link span{transform:translateX(4px)}
-.work-teaser-games{display:flex;gap:8px;align-items:center}
-.work-teaser-games img{display:block;height:92px;width:66px;object-fit:cover;object-position:top;border-radius:7px;box-shadow:0 6px 18px rgba(0,0,0,.28);transition:transform .2s ease}
-.work-teaser-games img.wide{width:150px}
-.work-teaser-inner:hover .work-teaser-games img{transform:translateY(-3px)}
-@media(max-width:1000px){.work-teaser-games img.wide{display:none}}
-@media(max-width:700px){.work-teaser-inner{grid-template-columns:1fr;gap:14px;padding:18px 0}.work-teaser-games img{height:74px;width:54px}}
+@media(max-width:700px){.work-teaser-inner{padding:14px 0}.work-teaser-text{font-size:.9rem}}
 
 /* Project list: two columns of compact cards */
 .project-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;border-top:0}
