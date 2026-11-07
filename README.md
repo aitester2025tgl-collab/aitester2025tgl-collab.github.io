@@ -6,29 +6,39 @@ Personal portfolio and lab for projects, experiments and AI exploration.
 
 Tiago Lab is where I share things I build in my spare time — from product experiments and games to AI-assisted tools and workflows.
 
-## Current projects
+Live site: https://aitester2025tgl-collab.github.io/
 
-- **FootLab** — football management game and product experiment.
-- **Character Creator** — AI-assisted character creation workflow built around local ComfyUI.
-- **Finance** — personal finance and investment tracking concept; the project itself is not part of this public repository.
-- **Visual Novel** — interactive storytelling experiment; the public case study is still being prepared.
+## Projects on the site
+
+**Games**
+- **FootLab** — football management game and product experiment (`projects/footlab.html`).
+- **Steel League** — retro arcade football game with a career mode (`projects/steel-league.html`).
+
+**Creative tools & apps**
+- **3D Creator** — desktop tool for organising 3D models for a 3D-printing workflow (`projects/3d-creator.html`).
+- **Character Creator** — AI-assisted character creation workflow built around local ComfyUI (`projects/character-creator.html`).
+- **Folha** — plant-care prototype (`projects/folha.html`).
+- **Leitor Leve** — lightweight offline reader for Windows and Android; preview builds are in the GitHub release `leitor-leve-v1-preview` (`projects/leitor-leve.html`).
+
+**Ideas**
+- **Public Oversight Observatory** — tracking public commitments, plans, resources and execution (`projects/observatorio.html`).
+- Finance and interactive storytelling concepts are mentioned on the homepage; they have no public page or code here.
+
+**Books**
+- **Second Chances: The Promise** — a novel by Tiago Louro (`projects/segundas-oportunidades.html`).
 
 ## Site structure
 
 ```text
 .
-├── index.html
-├── cv.html
+├── index.html            homepage
+├── cv.html               web CV (PDF in assets/)
 ├── collaboration.html
-├── ai-lab/
-│   └── index.html
-├── projects/
-│   ├── footlab.html
-│   └── character-creator.html
-├── assets/
-│   └── footlab/
-├── css/
-└── js/
+├── ai-lab/index.html
+├── projects/             one page per project (8)
+├── assets/               images, logo, favicon, CV PDF
+├── css/                  style.css (shared), improvements.css (homepage), page-specific CSS
+└── js/app.js             mobile menu, year, visitor counter
 ```
 
 ## Local development

@@ -52,3 +52,18 @@
 .visit-count-value #gcvc-views { color:inherit !important; font:inherit !important; font-weight:700 !important; }
 #visitCount { font-variant-numeric: tabular-nums; }
 @media(max-width:600px){ .footer-visits { order: 3; } }
+
+/* Brand + logo (restored: the November style.css upload dropped these rules, so pages using the logo showed it at 619px) */
+.brand{display:inline-flex;align-items:center;gap:.35em;color:#fff}
+.brand .brand-logo{margin-right:calc(10px - .35em)}
+.brand span,.brand b{color:#6fc8ff;font-weight:900}
+.brand .brand-logo+span{color:#fff}
+.brand-logo{display:block!important;flex:0 0 32px!important;width:32px!important;height:32px!important;max-width:32px!important;max-height:32px!important;object-fit:contain!important}
+
+/* Contrast fixes (WCAG AA) */
+.hero h1{color:#fff}
+.hero h1 span{color:#8fd6ff}
+.about-section .eyebrow{color:#4f7597}
+.collaborate-section .eyebrow{color:#062f52}
+.collaborate-inner>div:last-child>p{color:#082541}
+.collaborate-inner h2 span{color:#0b4f8a}
