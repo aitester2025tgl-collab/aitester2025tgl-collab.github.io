@@ -37,6 +37,10 @@
 .gallery-text p{color:#4d6b85;line-height:1.55}
 .gallery-text .kind{font-size:.72rem;font-weight:700;color:#4f7597;letter-spacing:.04em;text-transform:uppercase;margin:0}
 .gallery-text .source{color:#1268b3;font-weight:700}
+.gallery-text h3{margin:20px 0 6px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#197ac3}
+.gallery-text p{margin:0 0 10px}
+.gallery-text .status{display:inline-block;margin-bottom:4px}
+.gallery-text .source{display:inline-block;margin-top:10px}
 @media(max-width:1000px){.company-portrait .game-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:760px){.dialog-content{grid-template-columns:1fr}.gallery-text{order:-1}}
 .game-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
