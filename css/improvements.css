@@ -30,7 +30,15 @@
 .project-list .project-arrow{grid-column:auto;grid-row:auto;font-size:1rem}
 .project-list .project-row:not(a) .project-arrow{font-size:.62rem}
 /* Image previews need no label: the card title sits beside them. Placeholders (no image) keep theirs. */
-.project-list .project-art:not(.art-finance):not(.art-vn) span,.project-list .project-art:not(.art-finance):not(.art-vn) small{display:none}
+.project-list .project-art span,.project-list .project-art small{display:none}
+/* Sectors: a small heading over each group of cards */
+.project-sectors{display:grid;gap:30px}
+.sector-heading{display:flex;align-items:baseline;gap:10px;margin:0 0 12px;padding-bottom:9px;border-bottom:1px solid #dbe6ef}
+.sector-heading span{font-size:.68rem;font-weight:800;color:#4f7597;letter-spacing:.08em}
+.sector-heading h3{margin:0;font-size:1.05rem;letter-spacing:-.01em;color:#12304d}
+.sector-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 14px}
+.sector-pair .project-list{grid-template-columns:1fr}
+@media(max-width:700px){.sector-pair{grid-template-columns:1fr;gap:30px}}
 @media(max-width:1000px){.project-list .project-row{grid-template-columns:120px minmax(0,1fr) 16px;gap:12px}.project-list .project-art{height:84px}}
 @media(max-width:700px){.project-list{grid-template-columns:1fr}}
 @media(max-width:480px){.project-list .project-row{grid-template-columns:110px minmax(0,1fr);gap:12px;padding:10px}.project-list .project-row:hover{padding:10px}.project-list .project-art{height:78px}.project-list .project-arrow{display:none}.project-list .project-info p{font-size:.76rem}}
@@ -43,4 +51,7 @@
 .art-folha.art-shot{background-image:url(../assets/screenshots/folha/garden.webp);background-position:center 62%}
 .art-3d.art-shot{background-image:url(../assets/screenshots/3d-creator/model.webp);background-size:190%;background-position:8% 45%}
 .art-leitor.art-shot{background-image:url(../assets/screenshots/leitor-leve/reading.webp);background-size:160%;background-position:0 30%}
+.art-finance.art-shot{background-image:url(../assets/screenshots/finance/geral.webp);background-size:260%;background-position:50% 22%}
+.art-bgp.art-shot{background-image:url(../assets/screenshots/background-processor/beach.webp);background-position:center}
+.art-news.art-shot{background-image:url(../assets/screenshots/newsreel/texto.webp);background-size:130%;background-position:50% 30%}
 .art-observatorio.art-shot{background-image:url(../assets/screenshots/observatorio/contratos.webp);background-size:170%;background-position:20% 0}

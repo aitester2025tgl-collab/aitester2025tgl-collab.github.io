@@ -14,15 +14,19 @@ Live site: https://aitester2025tgl-collab.github.io/
 - **FootLab** — football management game and product experiment (`projects/footlab.html`).
 - **Steel League** — retro arcade football game with a career mode (`projects/steel-league.html`).
 
-**Creative tools & apps**
-- **3D Creator** — desktop tool for organising 3D models for a 3D-printing workflow (`projects/3d-creator.html`).
+**Creative tools**
 - **Character Creator** — AI-assisted character creation workflow built around local ComfyUI (`projects/character-creator.html`).
+- **3D Creator** — desktop tool for organising 3D models for a 3D-printing workflow (`projects/3d-creator.html`).
+- **Background Processor** — local ComfyUI tool for consistent environment backgrounds and their variants (`projects/background-processor.html`).
+
+**Everyday apps**
 - **Folha** — plant-care prototype (`projects/folha.html`).
 - **Leitor Leve** — lightweight offline reader for Windows and Android; preview builds are in the GitHub release `leitor-leve-v1-preview` (`projects/leitor-leve.html`).
+- **Financial Manager** — local personal finance app for bank and broker statements; the page shows invented demo data and the code is not in this repository (`projects/finance.html`).
+- **NewsReel** — turns a news story into a short vertical video with European Portuguese narration; paused but functional (`projects/newsreel.html`).
 
-**Ideas**
+**Civic tech**
 - **Public Oversight Observatory** — tracking public commitments, plans, resources and execution (`projects/observatorio.html`).
-- Finance and interactive storytelling concepts are mentioned on the homepage; they have no public page or code here.
 
 **Books**
 - **Second Chances: The Promise** — a novel by Tiago Louro (`projects/segundas-oportunidades.html`).
