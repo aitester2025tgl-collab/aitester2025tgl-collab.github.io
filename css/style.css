@@ -67,3 +67,6 @@
 .collaborate-section .eyebrow{color:#062f52}
 .collaborate-inner>div:last-child>p{color:#082541}
 .collaborate-inner h2 span{color:#0b4f8a}
+
+.ai-copy h2{color:#fff}.ai-copy h2 span{color:#7fd0ff}.ai-list strong{color:#fff}
+@media(max-width:600px){.nav-wrap:has(.case-nav){height:auto;flex-wrap:wrap;padding:14px 0 10px;row-gap:8px}.nav-wrap:has(.case-nav) .case-nav{width:100%;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.8rem}}
