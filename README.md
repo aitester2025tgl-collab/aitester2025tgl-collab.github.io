@@ -13,6 +13,7 @@ Live site: https://aitester2025tgl-collab.github.io/
 **Games**
 - **FootLab** — football management game and product experiment (`projects/footlab.html`).
 - **Steel League** — retro arcade football game with a career mode (`projects/steel-league.html`).
+- **FM27 Explorer** — tactic-aware scouting tool for Football Manager 2027 saves; download in the GitHub release `fm27-explorer-v1.0.0`, source in [fm27-explorer](https://github.com/aitester2025tgl-collab/fm27-explorer) (`projects/fm27-explorer.html`).
 
 **Creative tools**
 - **Character Creator** — AI-assisted character creation workflow built around local ComfyUI (`projects/character-creator.html`).
@@ -39,7 +40,7 @@ Live site: https://aitester2025tgl-collab.github.io/
 ├── cv.html               web CV (PDF in assets/)
 ├── collaboration.html
 ├── ai-lab/index.html
-├── projects/             one page per project (8)
+├── projects/             one page per project
 ├── assets/               images, logo, favicon, CV PDF
 ├── css/                  style.css (shared), improvements.css (homepage), page-specific CSS
 └── js/app.js             mobile menu, year, visitor counter
